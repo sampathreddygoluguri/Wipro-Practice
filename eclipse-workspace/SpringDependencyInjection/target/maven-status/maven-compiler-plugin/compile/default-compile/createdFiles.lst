@@ -1,0 +1,7 @@
+com\wipro\maven\Allocator.class
+com\wipro\maven\DelegateSetterDI.class
+com\wipro\maven\Manager.class
+com\wipro\maven\DelegateFieldDI.class
+com\wipro\maven\DelegateConstructorDI.class
+com\wipro\maven\App.class
+com\wipro\maven\AppConfig.class
