@@ -1,1 +1,1 @@
-# Wipro-Practice
+# Wipro-NGA-TrainingPractice
