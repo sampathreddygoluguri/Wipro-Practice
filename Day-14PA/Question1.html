@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JavaScript program to fetch data using Fetch API and display it on the console
+
+fetch("https://dummy.restapiexample.com/api/v1/employees")
+  .then(response => {
+    // Check if the response is successful
+    if (!response.ok) {
+      throw new Error("Network response was not ok " + response.statusText);
+    }
+    // Parse JSON data
+    return response.json();
+  })
+  .then(data => {
+    // Display retrieved data in the console
+    console.log("Employee Data Retrieved Successfully:");
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle any errors
+    console.error("Error fetching data:", error);
+  });
+
+    </script>
+</body>
+</html>

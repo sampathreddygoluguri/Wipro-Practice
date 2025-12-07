@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employees = [
+  { name: "abcd", grade: "A", years: 5, salary: 50000 },
+  { name: "asdf", grade: "B", years: 4, salary: 40000 },
+  { name: "erty", grade: "A", years: 6, salary: 50000 },
+  { name: "pojhg", grade: "C", years: 1, salary: 35000 },
+  { name: "qwdbn", grade: "B", years: 3, salary: 40000 }
+  ];
+
+   // Calculate Total Years of Experience of All Employees
+   const totalYears = employees.reduce((sum, emp) => sum + emp.years, 0);
+   console.log("Total Years of Experience of All Employees:", totalYears);
+
+   // Filter Employees Grade-wise
+   const gradeA = employees.filter(emp => emp.grade === "A");
+   const gradeB = employees.filter(emp => emp.grade === "B");
+   const gradeC = employees.filter(emp => emp.grade === "C");
+
+   console.log("Grade A Employees:", gradeA);
+   console.log("Grade B Employees:", gradeB);
+   console.log("Grade C Employees:", gradeC);
+
+   // Increment Bonus by 30% Grade-wise
+   const UpdatedBonus = gradeA.map(emp => ({...emp, salary: emp.salary + emp.salary * 0.3}));
+   console.log("Salary after increment of bonus:", UpdatedBonus);
+
+   </script>
+</body>
+</html>

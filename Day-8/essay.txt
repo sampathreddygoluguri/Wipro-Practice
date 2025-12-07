@@ -1,0 +1,4 @@
+This is first line of essay.
+It contains several words.
+Hello! I am Learning Java Programming.
+we are counting lines and words in this file.
