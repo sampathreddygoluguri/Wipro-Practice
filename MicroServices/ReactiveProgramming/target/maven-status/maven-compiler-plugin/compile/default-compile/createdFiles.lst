@@ -1,0 +1,4 @@
+com\company\ReactiveProgrammingApplication.class
+com\company\controller\ProductController.class
+com\company\repository\ProductRepository.class
+com\company\entities\Product.class
