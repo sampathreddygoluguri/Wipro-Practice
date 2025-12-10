@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  app:
+    image: metroride-api
+    container_name: metroride-app
+    ports:
+      - "8080:8080"
+  monitor:
+    image: busybox
+    container_name: monitor-service
+    command: ping google.com

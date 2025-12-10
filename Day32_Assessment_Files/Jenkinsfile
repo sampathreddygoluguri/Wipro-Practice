@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    environment {
+        DOCKERHUB_USER = 'your-username'
+        IMAGE_NAME = 'metroride-api'
+    }
+    stages {
+        stage('Checkout') {
+            steps { git 'https://github.com/yourusername/MetroRideAPI.git' }
+        }
+        stage('Build') {
+            steps { sh 'mvn clean package -DskipTests' }
+        }
+        stage('Docker Build') {
+            steps { sh 'docker build -t $DOCKERHUB_USER/$IMAGE_NAME .' }
+        }
+        stage('Docker Login') {
+            steps { sh "echo 'dummy-password' | docker login -u $DOCKERHUB_USER --password-stdin" }
+        }
+        stage('Docker Push') {
+            steps { sh 'docker push $DOCKERHUB_USER/$IMAGE_NAME' }
+        }
+    }
+}
